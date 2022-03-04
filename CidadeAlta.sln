@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
@@ -6,6 +6,8 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CidadeAlta.Domain", "CidadeAlta.Domain\CidadeAlta.Domain.csproj", "{BE246884-A6C9-41ED-B605-C2E0A050E81D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CidadeAlta.Data", "CidadeAlta.Data\CidadeAlta.Data.csproj", "{B47BE0CF-7760-4933-98B2-06CE3E0C63EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CidadeAlta.Api", "CidadeAlta.Api\CidadeAlta.Api.csproj", "{679D1055-D920-4746-80AB-F4F1A0668DE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B47BE0CF-7760-4933-98B2-06CE3E0C63EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B47BE0CF-7760-4933-98B2-06CE3E0C63EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B47BE0CF-7760-4933-98B2-06CE3E0C63EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{679D1055-D920-4746-80AB-F4F1A0668DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679D1055-D920-4746-80AB-F4F1A0668DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679D1055-D920-4746-80AB-F4F1A0668DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679D1055-D920-4746-80AB-F4F1A0668DE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
