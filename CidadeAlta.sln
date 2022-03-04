@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CidadeAlta.Data", "CidadeAl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CidadeAlta.Api", "CidadeAlta.Api\CidadeAlta.Api.csproj", "{679D1055-D920-4746-80AB-F4F1A0668DE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CidadeAlta.Security", "CidadeAlta.Security\CidadeAlta.Security.csproj", "{17BEA7EC-67D3-4C74-AED6-912A9534A035}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{679D1055-D920-4746-80AB-F4F1A0668DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{679D1055-D920-4746-80AB-F4F1A0668DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{679D1055-D920-4746-80AB-F4F1A0668DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17BEA7EC-67D3-4C74-AED6-912A9534A035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17BEA7EC-67D3-4C74-AED6-912A9534A035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17BEA7EC-67D3-4C74-AED6-912A9534A035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17BEA7EC-67D3-4C74-AED6-912A9534A035}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
