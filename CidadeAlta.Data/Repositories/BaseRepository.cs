@@ -29,7 +29,7 @@ namespace CidadeAlta.Data.Repositories
         /// Finds an entity with the given primary key value.
         /// </summary>
         /// <param name="id">The value of the primary key for the entity to be found.</param>
-        public virtual TEntity Find(int id)
+        public virtual TEntity? Find(int id)
         {
             return _dbSet.Find(id);
         }
@@ -60,9 +60,12 @@ namespace CidadeAlta.Data.Repositories
         /// <param name="id">The primary key value.</param>
         public virtual void Delete(int id)
         {
-            TEntity entity = Find(id);
-            _dbSet.Remove(entity);
-            _context.SaveChanges();
+            TEntity? entity = Find(id);
+            if (entity != null)
+            {
+                _dbSet.Remove(entity);
+                _context.SaveChanges();
+            }           
         }
     }
 }
