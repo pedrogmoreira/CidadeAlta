@@ -15,7 +15,7 @@ Faça uma aplicação que contenha os seguintes serviços para consulta no banco
   - Edição de Código Penal
   - Visualização do Código Penal pelo ID
 
-[Documentação Completa](../blob/master/Exerc%C3%ADcio%20-%20Back-end.pdf)
+[Documentação Completa](../master/Exerc%C3%ADcio%20-%20Back-end.pdf)
 
 ## Tecnologias Utilizadas:
   - .NET 6.0
