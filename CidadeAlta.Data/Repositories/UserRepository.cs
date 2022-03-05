@@ -11,6 +11,11 @@ namespace CidadeAlta.Data.Repositories
         {
         }
 
+        /// <summary>
+        /// Finds a user by it's username
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
         public User? Find(string username)
         {
             var user = GetAll()

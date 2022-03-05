@@ -1,7 +1,24 @@
-﻿namespace CidadeAlta.Domain.Entities
+﻿using CidadeAlta.Domain.DTO;
+
+namespace CidadeAlta.Domain.Entities
 {
     public class CriminalCode : BaseEntity
     {
+        public CriminalCode()
+        {
+        }
+
+        public CriminalCode(CriminalCodeDTO criminalCodeViewModel, int userId)
+        {
+            Name = criminalCodeViewModel.Name;
+            Description = criminalCodeViewModel.Description;
+            Penalty = criminalCodeViewModel.Penalty;
+            PrisionTime = criminalCodeViewModel.PrisionTime;
+            StatusId = criminalCodeViewModel.StatusId;
+            CreateDate = DateTime.UtcNow;
+            CreateUserId = userId;
+        }
+
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Penalty { get; set; }

@@ -6,7 +6,7 @@ namespace CidadeAlta.Data.Context
 {
     public class CidadeAltaContext : DbContext
     {
-        public DbSet<CriminalCode> CiminalCodes { get; set; }
+        public DbSet<CriminalCode> CriminalCodes { get; set; }
         public DbSet<Status> Statuses { get; set; }
         public DbSet<User> Users { get; set; }
 

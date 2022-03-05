@@ -73,7 +73,7 @@ namespace CidadeAlta.Data.Migrations
 
                     b.HasIndex("UpdateUserId");
 
-                    b.ToTable("CiminalCodes");
+                    b.ToTable("CriminalCodes");
                 });
 
             modelBuilder.Entity("CidadeAlta.Domain.Entities.Status", b =>

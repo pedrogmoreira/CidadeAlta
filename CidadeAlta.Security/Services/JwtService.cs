@@ -16,6 +16,11 @@ namespace CidadeAlta.Security.Services
             _jwtTokenOptions = jwtTokenOptions.Value;
         }
 
+        /// <summary>
+        /// Generates the JWT Token
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public virtual string GenerateToken(User user)
         {
             var jwtSecurityToken = new JwtSecurityToken(
@@ -29,8 +34,14 @@ namespace CidadeAlta.Security.Services
             return new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
         }
 
+        /// <summary>
+        /// Gets a user it's claims
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         private IEnumerable<Claim> GetClaims(User user)
         {
+            yield return new Claim(ClaimTypes.Role, "User");
             yield return new Claim(ClaimTypes.Name, user.UserName);
             yield return new Claim("UserId", user.Id.ToString());
             yield return new Claim(JwtRegisteredClaimNames.Jti, _jwtTokenOptions.JtiGenerator());

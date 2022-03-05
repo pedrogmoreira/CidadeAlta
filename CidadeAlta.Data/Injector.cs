@@ -15,6 +15,7 @@ namespace CidadeAlta.Data
               options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ICriminalCodeRepository, CriminalCodeRepository>();
         }
     }
 }

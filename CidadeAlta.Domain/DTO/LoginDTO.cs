@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace CidadeAlta.Domain.ViewModel
+namespace CidadeAlta.Domain.DTO
 {
-    public class LoginViewModel
+    public class LoginDTO
     {
         [Required(ErrorMessage = "The UserName is Required")]
         [DisplayName("Username")]

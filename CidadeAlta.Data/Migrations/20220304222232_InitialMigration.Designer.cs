@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CidadeAlta.Data.Migrations
 {
     [DbContext(typeof(CidadeAltaContext))]
-    [Migration("20220304181753_InitialMigration")]
+    [Migration("20220304222232_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -75,7 +75,7 @@ namespace CidadeAlta.Data.Migrations
 
                     b.HasIndex("UpdateUserId");
 
-                    b.ToTable("CiminalCodes");
+                    b.ToTable("CriminalCodes");
                 });
 
             modelBuilder.Entity("CidadeAlta.Domain.Entities.Status", b =>

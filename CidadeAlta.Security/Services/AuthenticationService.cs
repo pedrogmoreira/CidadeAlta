@@ -1,7 +1,7 @@
-﻿using CidadeAlta.Domain.Entities;
+﻿using CidadeAlta.Domain.DTO;
+using CidadeAlta.Domain.Entities;
 using CidadeAlta.Domain.Repositories;
 using CidadeAlta.Domain.Services;
-using CidadeAlta.Domain.ViewModel;
 using CidadeAlta.Security.Helper;
 
 namespace CidadeAlta.Security.Services
@@ -17,7 +17,12 @@ namespace CidadeAlta.Security.Services
             _jwtService = jwtService;
         }
 
-        public string AthenticateUser(LoginViewModel loginViewModel)
+        /// <summary>
+        /// Authenticates a User
+        /// </summary>
+        /// <param name="loginViewModel"></param>
+        /// <returns></returns>
+        public string AthenticateUser(LoginDTO loginViewModel)
         {
             var user = _userRepository.Find(loginViewModel.UserName);
 
@@ -30,11 +35,12 @@ namespace CidadeAlta.Security.Services
         }
 
         /// <summary>
-        /// Validate a user credentials,
+        /// Validates a user credentials
         /// </summary>
         /// <param name="loginViewModel"></param>
+        /// <param name="user"></param>
         /// <returns></returns>
-        private bool ValidateCredentials(LoginViewModel loginViewModel, User user)
+        private bool ValidateCredentials(LoginDTO loginViewModel, User user)
         {
             if (user == null)
             {

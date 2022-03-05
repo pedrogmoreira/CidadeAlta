@@ -20,18 +20,44 @@ namespace CidadeAlta.Data.Repositories
         /// Gets all entities.
         /// </summary>
         /// <returns></returns>
-        public virtual IQueryable<TEntity> GetAll()
+        public virtual IQueryable<TEntity> GetAll(string[] includes = null)
         {
-            return _dbSet.AsNoTracking();
+            var query = _dbSet.AsNoTracking().AsQueryable();
+
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                {
+                    if (typeof(TEntity).GetProperty(include) != null)
+                    {
+                        query = query.Include(include);
+                    }
+                }
+            }
+
+            return query;
         }
 
         /// <summary>
         /// Finds an entity with the given primary key value.
         /// </summary>
         /// <param name="id">The value of the primary key for the entity to be found.</param>
-        public virtual TEntity? Find(int id)
+        public virtual TEntity? Find(int id, string[] includes = null)
         {
-            return _dbSet.Find(id);
+            var query = _dbSet.AsQueryable();
+
+            if (includes != null)
+            {
+                foreach (var include in includes)
+                {
+                    if(typeof(TEntity).GetProperty(include) != null)
+                    {
+                        query = query.Include(include);
+                    }
+                }
+            }
+
+            return query.Where(e => e.Id.Equals(id)).SingleOrDefault();
         }
 
         /// <summary>

@@ -1,9 +1,9 @@
-﻿using CidadeAlta.Domain.ViewModel;
+﻿using CidadeAlta.Domain.DTO;
 
 namespace CidadeAlta.Domain.Services
 {
     public interface IAuthenticationService
     {
-        string AthenticateUser(LoginViewModel loginViewModel);
+        string AthenticateUser(LoginDTO loginViewModel);
     }
 }

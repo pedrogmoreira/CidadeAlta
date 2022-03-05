@@ -1,14 +1,15 @@
-﻿using CidadeAlta.Domain.Services;
-using CidadeAlta.Domain.ViewModel;
+﻿using CidadeAlta.Domain.DTO;
+using CidadeAlta.Domain.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
+using System;
 
 namespace CidadeAlta.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class AuthenticationController : ControllerBase
     {
         private readonly IAuthenticationService _authenticationService;
@@ -24,7 +25,9 @@ namespace CidadeAlta.Api.Controllers
         /// <returns></returns>
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult Authenticate(LoginViewModel loginViewModel)
+        [SwaggerResponse(StatusCodes.Status200OK, "JWT Bearer Token", typeof(string))]
+        [SwaggerResponse(StatusCodes.Status401Unauthorized, Type = typeof(UnauthorizedResult))]
+        public IActionResult Authenticate(LoginDTO loginViewModel)
         {
             var jwtToken = _authenticationService.AthenticateUser(loginViewModel);
             if (jwtToken == null)
